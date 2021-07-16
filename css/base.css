@@ -1,0 +1,407 @@
+
+
+/* GENERAL STYLES */
+body{
+    margin: 0;
+    color: white;
+    background-color: white;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none; /* eliminamos las lineas inferiores de los enlaces*/
+}
+
+/* HEADER */
+
+.header-1{
+    background-color: #0b76ce;
+    padding: 0.5%;
+    height: 130px;
+}
+
+.header-1 .logo{ /*div*/
+    width: 40%;
+    float: left; /*hacemos que se ubique a la izq de todo*/
+    text-align: center;
+    
+}
+
+.header-1 .logo .img-medium{
+    width: 20%;
+    padding: 2.5%; /* para centrar un poco mas el logo, de todos los lados*/
+}
+
+.header-1 .menu{
+    width: 60%;
+    float: right;
+    padding: 3% 0 1% 0; /* arriba 3%, derecha 0, abajo 1%, izq 0 */
+}
+
+.header-1 .menu ul{
+    float: right;
+    width: 80%;
+    text-align: center;
+}
+
+.header-1 .menu ul li{
+    list-style: none;
+   /* color: white; */
+    text-align: center;
+    margin: 0 2%;
+    display: inline-block; /*para posicionar los elementos en forma horizontal o de fila*/
+}
+
+.header-1 .menu ul li a{
+    color: white;
+    font-size: 1.5rem;
+    
+}
+
+/* CONTENT HOME */
+
+.container{
+    padding: 2%; /* aplica 2% a todos los lados */
+}
+
+.home{
+    padding: 2% 10%; /* arriba y abajo 2%, izq y derecha 10% */
+    display: inline-block;
+}
+
+.home .detail{
+    width: 50%;
+    float: left;
+    margin-top: 8%;
+}
+
+.home .detail h1{
+    font-size: 5rem;
+    margin: 0;
+    font-weight: 1000;
+}
+
+.home .detail p{
+    font-size: 1.5rem;
+}
+
+.home .detail h1,
+.home .detail p{
+    color: #0b76ce;
+}
+
+.home .image{
+    width: 50%;
+    text-align: center;
+    float: left; /* deberia ser derecha.. */
+}
+
+.home .image .img-slider{
+    width: 80%;
+    float: right;
+}
+
+.image .img-slider:hover{
+    
+    transform: translate(40px, 20px);
+}
+
+/* CONTENT SERVICES */
+
+.services{
+    padding: 8% 0 0 0; /* arriba 8%, derecha 0, abajo 0 e izq 0 */
+    background-color: #0b76ce;
+    position: relative; /* para que después podamos manejarlo como queramos.*/
+}
+
+.services::before{
+    content: "";
+    width: 100%;
+    height: 110px;
+    top: 0;
+    display: block; /* se comporta como un bloque, exactamente igual a un div */
+    position: absolute; /* para que se mantenga ahí */
+    z-index: 1; /* para que se superponga, entre más valor se de, queda como una
+                    capa superior */
+    background-image: url(../images/top-bg.png);
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.services::after{
+    background-image: url(../images/bottom-bg.png);
+    background-position: bottom center; /*bottom: para quitar el sobrante del bloque azul, en la parte de abajo*/
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    display: block;
+    content: "";
+    height: 100px;
+    width: 100%;   
+}
+
+.services h1{
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+}
+
+.services hr{
+    width: 30%;
+    height: 0.2rem;
+    background-color: #d2d2d2;
+    border: none;
+    margin-bottom: 4%;
+}
+
+.content-services{
+    display: inline-block;
+    margin: 0 5%; /* arriba y abajo 0, izq y derecha 5% */
+}
+
+.content-services .item{
+    display: inline-block;
+    text-align: center; /* Posicionamos los contenidos en el centro */
+    float: left;
+    width: 33.3%;
+}
+
+.content-services .item img{
+    width: 30%;
+}
+
+.item .img1:hover{
+    transform: scale(1.2);
+    transition-duration: 0.8s;
+}
+
+.item .img2:hover{
+    transform: translateY(-20px); /* positvo hacia abajo y - es hacia arria*/
+    -webkit-transition-duration: 0.5s;
+}
+
+.item .img3:hover{
+    transform: translateX(25px); /* hacia la derecha */
+    -webkit-transition-duration: 0.8s;
+    animation-delay: 0.5s; /* retardo */
+    
+}
+
+.content-services .item p{
+    padding: 0 5%; /* arriba y abajo 0%, izq y derecha 5% */
+}
+
+
+/* SECTION IMC */
+
+.imc{
+    background-color: rgb(255, 255, 255); 
+    display: flex;
+}
+
+.imc .info h1{
+    font-size: 2rem;
+    color:  #0b76ce;
+    margin: 0;
+}
+
+.imc .info,
+.imc .formulario{
+    width: 50%;
+    text-align: center;
+    color: #0b76ce;
+    font-weight: bold;
+}
+
+.imc .info img{
+    width: 60%;
+    margin-top: 30px;
+    border-radius: 130px;
+}
+
+input[name=peso],
+input[name=altura] {
+    width: 50%;
+    padding: 10px 0; /*arriba y abajo, izq y derecha*/ /* manejamos el grosor de los campos */
+    margin: 8px 34px; /* generamos los espaciados entre cada input*/
+    border: none;
+    border-radius: 10px;
+    color: #0b76ce; /* color de las letras*/
+    background-color: #eaeeee;
+}
+
+input[name=peso] {    
+
+    margin-left: 20px;
+}
+
+input[name=altura] {
+
+    margin-left: 10px; /* lo coloque de menor tamaño, para que no se desborde */
+}
+
+input[type=submit] {
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 15px; /* para que el boton no quede tan pegado de los otros campos*/
+    margin-left: 60px;
+    color: #0b76ce;
+    background-color: #c3d7e9;
+}
+
+/* CONTENT BLOG */
+
+.blog{
+    position: relative;
+    background-color: white;
+}
+
+.blog h1{
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.blog h1,
+.content-blog .notice p{
+    color: #0b76ce;
+}
+
+
+.blog h2{
+    color: #125388e7;
+}
+
+.blog hr{
+    background-color: #1e76bee7;
+    margin-bottom: 2%;
+    width: 40%;
+    height: 0.2rem;
+    border: none;
+}
+
+.content-blog{
+    margin: 2% 5%;
+    display: inline-block;
+}
+
+.content-blog .notice{
+    display: inline-block;
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    transition: 0.8s; /* */
+}
+
+.content-blog .notice p{
+    padding: 0 5%;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.content-blog .notice img{
+    width: 45%;
+    border-radius: 60px;
+}
+
+.notice:hover{
+    transform: scale(1.1);
+    background:  #c3d7e9;
+    border-radius: 20px;
+}
+
+.notice:hover p{
+    /*filter: invert(1); se invierte al color contrario que tenia por defecto */
+    color: #197ac998;
+    font-weight: 550;
+}
+
+
+/* FOOTER */
+
+footer{
+    background-color:  #0b76ce;
+    width: 100%;
+    display: block;
+}
+
+footer .social{
+    text-align: center;
+    width: 100%;
+    background-color: #eeeeeeb5;    
+}
+
+footer .social ul{
+    padding: 10px;
+}
+
+footer .social ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 15px 10px 15px; /*espaciados de iconos (arriba, derecha, abajo, izq)*/
+    font-size: 35px; /* tamaño de los i */
+    color: #fbfbfb;
+}
+
+.content-footer {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-color:  #0b76ce;
+}
+
+.content-footer .section2{
+    text-align: center;
+}
+
+.content-footer .section2 img{
+    width: 12%;
+    margin-top: 20px;
+}
+.content-footer .section2 h3{
+    font-size: 35px;
+    margin-top: 5px;
+    color:#fbfbfb;
+    text-transform: uppercase;
+} 
+
+.content-footer .info{
+    display: flex;
+    text-align: justify;
+   /* column-count: 2;
+    column-gap: 20em; espacio entre columnas
+    text-align: justify;
+    column-rule: rgb(255, 255, 255) solid 4.5px;*/
+}
+
+.content-footer .info .right,
+.content-footer .info .left{
+    width: 50%;
+    padding: 0 40px; /* arriba y abajo, izq derecha*/
+}
+
+.content-footer .info .right{
+    border-left: solid #fdfdfd;
+    padding-top: 0;
+    column-count: 2;
+    column-gap: 0; /*espacio entre columnas*/
+    
+}
+
+.content-footer .info .right ul{
+    padding-left: 0; /*corrimos todas las listas */
+}
+
+.content-footer .info .right ul li{
+    list-style: none;
+
+}
+
+footer .copyright{
+    text-align: center;
+    padding-top: 10px;
+    background-color:  #0b76ce;
+}
