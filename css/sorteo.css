@@ -1,0 +1,38 @@
+
+
+.content{
+    margin: 2.5em auto;
+}
+
+.title{
+    color: rgb(99, 99, 99);
+    text-align: center;
+    padding-top: 50px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.circulo {
+    margin-top: 90px;
+    height: 200px;
+    width: 200px;
+    background: red;
+    border-radius: 50%;
+    transition-duration: 0.8s;
+}
+
+.circulo:hover{
+    transform: scale(1.1);
+    transition-duration: 0.8s;
+}
+
+.init{
+    color: white;
+    background-color: red;
+    border: none;
+    margin-left: 50px;
+    font-size: 30px;
+    margin-top: 40%;
+    text-align: center;
+    font-weight: bolder;
+}

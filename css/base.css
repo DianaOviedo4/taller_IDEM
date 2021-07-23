@@ -1,6 +1,7 @@
 
 
-/* GENERAL STYLES */
+/****************** GENERAL STYLES ******************/
+
 body{
     margin: 0;
     color: white;
@@ -12,7 +13,7 @@ a{
     text-decoration: none; /* eliminamos las lineas inferiores de los enlaces*/
 }
 
-/* HEADER */
+/***************** HEADER *****************/
 
 .header-1{
     background-color: #0b76ce;
@@ -58,7 +59,7 @@ a{
     
 }
 
-/* CONTENT HOME */
+/***************** CONTENT HOME *****************/
 
 .container{
     padding: 2%; /* aplica 2% a todos los lados */
@@ -106,7 +107,7 @@ a{
     transform: translate(40px, 20px);
 }
 
-/* CONTENT SERVICES */
+/***************** CONTENT SERVICES *****************/
 
 .services{
     padding: 8% 0 0 0; /* arriba 8%, derecha 0, abajo 0 e izq 0 */
@@ -167,8 +168,9 @@ a{
     width: 33.3%;
 }
 
-.content-services .item img{
+.content-services .item img{ /* estado base */
     width: 30%;
+    transition-duration: 0.8s;
 }
 
 .item .img1:hover{
@@ -185,7 +187,6 @@ a{
     transform: translateX(25px); /* hacia la derecha */
     -webkit-transition-duration: 0.8s;
     animation-delay: 0.5s; /* retardo */
-    
 }
 
 .content-services .item p{
@@ -193,7 +194,7 @@ a{
 }
 
 
-/* SECTION IMC */
+/***************** SECTION IMC *****************/
 
 .imc{
     background-color: rgb(255, 255, 255); 
@@ -221,8 +222,8 @@ a{
 }
 
 input[name=peso],
-input[name=altura] {
-    width: 50%;
+input[name=altura], select {
+    width: 40%;
     padding: 10px 0; /*arriba y abajo, izq y derecha*/ /* manejamos el grosor de los campos */
     margin: 8px 34px; /* generamos los espaciados entre cada input*/
     border: none;
@@ -231,14 +232,23 @@ input[name=altura] {
     background-color: #eaeeee;
 }
 
+.user{
+   margin-right: 35px;
+}
+
+select {
+    margin-left: 0px;
+    width: 32%;
+}
+
 input[name=peso] {    
 
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 input[name=altura] {
 
-    margin-left: 10px; /* lo coloque de menor tamaño, para que no se desborde */
+    margin-left: 15px; /* lo coloque de menor tamaño, para que no se desborde */
 }
 
 input[type=submit] {
@@ -252,7 +262,39 @@ input[type=submit] {
     background-color: #c3d7e9;
 }
 
-/* CONTENT BLOG */
+.result{
+    font-size: 2rem;
+    margin-top: 6%;
+}
+
+.result label{
+    color: #0b76ce;
+}
+
+.result .value{
+    padding: 1% 4%;
+    background-color: #1983daad;
+    border-radius: 8px;
+    color: white;
+}
+
+/******** VALIDACIONES ********/
+.error{
+    border: solid 2px #FF0000;
+}
+.errorcito{
+    color: red;
+}
+input:invalid {
+    border: solid 4px red;
+}
+
+input:valid{
+    border: steelblue;
+}
+  
+
+/***************** CONTENT BLOG *****************/
 
 .blog{
     position: relative;
@@ -320,7 +362,7 @@ input[type=submit] {
 }
 
 
-/* FOOTER */
+/****************** FOOTER ******************/
 
 footer{
     background-color:  #0b76ce;

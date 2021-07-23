@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My first project</title>
-    <!--STYLES CSS, JS-->
+    <!--STYLES CSS-->
     <link rel="stylesheet" href="css/base.css">
     <!-- Fontawesome -->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg></script>
@@ -80,14 +80,33 @@
                 </div>
 
                 <div class="formulario">
-                    <form action="" id="formIMC" method="POST">
+                    <form action="" id="formImc" class="custom-form" onsubmit="return false;" method="POST">
+                        <label class="user">Tipo de usuario</label>
+                        <select name="users" id="typeUser">
+                            <option disabled selected value="">Seleccione...</option>
+                            <option value="0">Niño</option>
+                            <option value="1">Adolescente</option>
+                            <option value="2">Adulto</option>
+                        </select><br>
+                        <p id="camp0" class="errorcito" ></p>
                         <label for="">Peso (Kg)</label>
-                        <input type="text" name="peso" placeholder="  Peso..."><br>
+                        <!-- step : permite dar un rango de numeros permitidos -->
+                        <input type="number" name="peso" id="pesoImc" value="" placeholder=" 85.5" step="0.1" min="0"><br>
+                        <p id="camp1" class="errorcito" ></p>
                         <label for="">Altura (Cm)</label>
-                        <input type="text" name="altura" placeholder="  Altura..."><br>
-                        <input type="submit" value="Calculate">
+                        <input type="number" name="altura" id="alturaImc" value="" placeholder="178.5" step="0.1" min="0"><br>
+                        <p id="camp2" class="errorcito"></p>
+                        <input type="submit" value="Calcular">
+
+                        <p id="msgError" class="errorcito"></p>
+                        
     
                     </form>
+
+                    <div class="result">
+                        <label>Tu IMC es</label>
+                        <span id="resultIMC" class="value">?</span>
+                    </div>
 
                 </div>
 
@@ -174,6 +193,7 @@
 
             <div class="copyright">
                 <p>&copy; 2020 Copyright. Nombrecito de la empresa</p>
+                <br>
             </div>
     
         </div>
