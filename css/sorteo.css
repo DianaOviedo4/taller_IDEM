@@ -36,3 +36,17 @@
     text-align: center;
     font-weight: bolder;
 }
+
+
+.ganador{
+    color: black;
+    background-color: rgb(216, 221, 236);
+    width: 50%;
+    margin-left: 330px;
+    text-align: center;
+    height: 50px;
+    border-radius: 20px;
+    padding-top: 5px; /*centramos las letras*/
+    font-size: 20px;
+}
+
