@@ -8,6 +8,8 @@
     <title>My first project</title>
     <!--STYLES CSS-->
     <link rel="stylesheet" href="css/base.css">
+    <!--Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <!-- Fontawesome -->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg></script>
 
@@ -81,7 +83,7 @@
 
                 <div class="formulario">
                     <form action="" id="formImc" class="custom-form" onsubmit="return false;" method="POST">
-                        <label class="user">Tipo de usuario</label>
+                        <label class="user">Tipo de usuario*</label>
                         <select name="users" id="typeUser">
                             <option disabled selected value="">Seleccione...</option>
                             <option value="0">Niño</option>
@@ -89,11 +91,11 @@
                             <option value="2">Adulto</option>
                         </select><br>
                         <p id="camp0" class="errorcito" ></p>
-                        <label for="">Peso (Kg)</label>
+                        <label for="">Peso (Kg)*</label>
                         <!-- step : permite dar un rango de numeros permitidos -->
                         <input type="number" name="peso" id="pesoImc" value="" placeholder=" 85.5" step="0.1" min="0"><br>
                         <p id="camp1" class="errorcito" ></p>
-                        <label for="">Altura (Cm)</label>
+                        <label for="">Altura (Cm)*</label>
                         <input type="number" name="altura" id="alturaImc" value="" placeholder="178.5" step="0.1" min="0"><br>
                         <p id="camp2" class="errorcito"></p>
                         <input type="submit" value="Calcular">
@@ -117,27 +119,35 @@
         <section class="container blog">
             <h1>Blog</h1><hr>
             <div class="content-blog">
-                <div class="notice">
-                    <h2>Entrénate</h2>
-                    <img src="https://cdn.pixabay.com/photo/2016/11/22/22/24/adult-1850925_960_720.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Nostrum delectus dolor vero ratione tempore ullam aspernatur consequuntur omnis, 
-                        ea perferendis.</p>
-                </div>
-                <div class="notice">
-                    <h2>Comparte</h2>
-                    <img src="https://cdn.pixabay.com/photo/2019/07/12/20/56/zumba-4333580_960_720.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Nostrum delectus dolor vero ratione tempore ullam aspernatur consequuntur omnis, 
-                        ea perferendis.</p>
-                </div>
-                <div class="notice">
-                    <h2>Obtiene</h2>
-                    <img src="https://cdn.pixabay.com/photo/2017/07/02/19/24/dumbbells-2465478_960_720.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Nostrum delectus dolor vero ratione tempore ullam aspernatur consequuntur omnis, 
-                        ea perferendis.</p>
-                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="card">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/22/22/24/adult-1850925_960_720.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title" >Entrenate</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="https://cdn.pixabay.com/photo/2019/07/12/20/56/zumba-4333580_960_720.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title" >Comparte</h5>
+                          <p class="card-text" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="https://cdn.pixabay.com/photo/2017/07/02/19/24/dumbbells-2465478_960_720.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Obtiene</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.
+                            This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                    </div>
 
             </div>
 

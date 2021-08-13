@@ -1,0 +1,21 @@
+
+
+div#game1{
+    display: inline-block;
+    width: 100%;
+}
+
+#game1 .item{
+    background-color: black;
+    width: 32%;
+    float: left;
+    height: 100px;
+    text-align: center;
+    border: 0.5px solid white;
+    border-radius: 5%;
+    padding: 10% 0;
+}
+
+.item.clicked{
+    background-color: cyan !important; /*importan da prioridad, o preferencia*/
+}

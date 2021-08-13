@@ -11,22 +11,21 @@ itemServices.addEventListener('click', function () {
 ////////////////////// FORMULARIO //////////////////////
 
 let myForm = document.getElementById('formImc');
+
+//var re = /^d+(.d+)?$/;
+var msg0 = document.getElementById('camp0');
+var msg1 = document.getElementById('camp1');
+var msg2 = document.getElementById('camp2');
+var msg = document.getElementById('msgError');
 // obtenemos todos los inputs
 const inputs = document.querySelectorAll('#formImc input');
 myForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
     let selected = document.getElementById('typeUser').value;
-
-    var msg0 = document.getElementById('camp0');
-    var msg1 = document.getElementById('camp1');
-    var msg2 = document.getElementById('camp2');
-    var msg = document.getElementById('msgError');
-
+    
     let weight = myForm['pesoImc'].value;
     let height = myForm['alturaImc'].value;
-    
-    //var re = /^d+(.d+)?$/;
 
     if(selected == ""){
         msg0.innerHTML = "Seleccione una opción";
